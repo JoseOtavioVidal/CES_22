@@ -1,5 +1,5 @@
-from  import *
-import wordtools.py
+from test_suite import *
+from wordtools import *
 
 test(cleanword("what?") == "what")
 test(cleanword("'now!'") == "now")
@@ -11,8 +11,8 @@ test(has_dashdash("spoke--"))
 test(has_dashdash("distance--but"))
 test(not has_dashdash("-yo-yo-"))
 
-test(extract_words("Now is the time!  'Now', is the time? Yes, now.") ==
-      ['now','is','the','time','now','is','the','time','yes','now'])
+test(extract_words("Now is the time!  'Now', is the time? Yes, now.") ==\
+      ['now', 'is', 'the', 'time', 'now', 'is', 'the', 'time', 'yes', 'now'])
 test(extract_words("she tried to curtsey as she spoke--fancy") ==
       ['she','tried','to','curtsey','as','she','spoke','fancy'])
 

@@ -1,18 +1,17 @@
-from test_suite import *
-
 def cleanword(s):
     """Return only the letters of the string"""
-    vocabulary = "!@#$%¨&*()'""'´`^~{}[],.<>;:"
+    vocabulary = "!-_?@#$%¨&*()''´`^~{}[],.<>;:=+"
     clean = ""
-    for x in vocabulary:
-        if x not in s:
+    for x in s:
+        if x not in vocabulary:
             clean += x
+
     return clean
 
 
 def has_dashdash(s):
-    """See is there is a dash in the string"""
-    if s.count("-") > 0:
+    """See if there is a dash in the string"""
+    if s.count("--") > 0:
         return True
     else:
         return False
@@ -20,26 +19,40 @@ def has_dashdash(s):
 
 def extract_words(s):
     """Extract the words of a string"""
-    return s.split()
+
+    vocabulary = "!-_?@#$%¨&*()''´`^~{}[],.<>;:=+"
+    clean = ""
+    for x in s:
+        if x not in vocabulary:
+            clean += x
+        else:
+            clean+=" "
+    clean = clean.split()
+    answer = []
+    for x in clean:
+        answer.append(x.lower())
+    return answer
 
 
-def wordcounts(word, s):
+def wordcount(word, s):
     """Counts the word in the list"""
     return s.count(word)
 
 
 def wordset(s):
     """Create the wordset to the string"""
-    for i in range(s.lenght):
-        if s.count(s[i]) >1:
-            s.remove(s[i])
-            i = 0
-    return s.sort()
+    word = []
+    for x in (s):
+        word.append(x)
+        if word.count(x) > 1:
+            word.remove(x)
+    word.sort()
+    return word
 
 def longestword(s):
     """Defines the major word in te list"""
     max = 0
-    for i in range(s.lenght):
-        if max < s[i].lenght:
-            max = s[i].lenght
+    for i in range(len(s)):
+        if max < len(s[i]):
+            max = len(s[i])
     return max
