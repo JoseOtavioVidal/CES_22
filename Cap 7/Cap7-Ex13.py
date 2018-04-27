@@ -4,6 +4,7 @@ import math
 
 # We can only draw a picture without lifting the pen or going over an edge more than once if the picture have
 # , in maximum, a pair of vertices with a odd degree
+# So, we can draw pictures 1, 5 and 6
 
 #Create the fuction to draw the picture
 def draw_picture(movement):
@@ -21,8 +22,6 @@ wn = turtle.Screen()
 wn.title("Pictures")
 #Setup the list of pairs
 movement = [(0, 50), (90, 50), (90, 50), (90, 50),(135, 50*math.sqrt(2)), (75, 50), (120, 50), (75, 50*math.sqrt(2))]
-movement1 = 
-print(type(movement))
 #Call the fuction
-draw_house(movement)
+draw_picture(movement)
 wn.mainloop()
