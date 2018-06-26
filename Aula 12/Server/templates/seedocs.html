@@ -1,0 +1,19 @@
+<html>
+
+    <head>
+        <title>See the files uploaded</title>
+
+    </head>
+    <body>
+
+        <h1>list of the files</h1>
+        <ul>
+            {% for file in files %}
+            <a href = '/uploads/{{ file }}' > {{ file }} </a>
+            <br>
+            {% endfor%}
+        </ul>
+        <a href = '/'> Return to home </a>
+    </body>
+
+</html>
