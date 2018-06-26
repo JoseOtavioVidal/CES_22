@@ -7,14 +7,14 @@ def index():
     return render_template('index.html')
 
 @app.route('/visit-counter/')
-def visits(count):
+def visits():
     if 'visits' in session:
         session['visits'] = session.get('visits') + 1  # reading and updating session data
     else:
         session['visits'] = 1 # setting session data
-    return render_template('visit-counter.html', count = session.get('visits'))
+    return render_template('visit-counter.html', count=session.get('visits'))
 
-@app.route('/delete-visits/')
+@app.route('/deletedvisit')
 def delete_visits():
     session.pop('visits', None) # delete visits
     return render_template('deletedvisit.html')
