@@ -1,0 +1,18 @@
+Das situações vividas no projeto, há algumas em que podemos identificar o uso dos princípios SOLID.
+
+A primeira foi ao criar uma classe para o form utilizado para obtenção das informações de cadastro dos alunos
+na plataforma e outra classe para as informações das vagas das empresas. Ao fazer isso, podemos observar a utili-
+zação do princípio S (Single responsibility), pois a classe possui apenas uma única finalidade e ao desacoplar essa
+parte do código do script que renderizava as páginas, foi mais fácil a análise de bugs.
+
+Além disso, com esse uso de classes se faz presente o princípio O (Open closed),pois não é possível modificar os atributos
+internos daquelas classes, porém elas podem ser livremente utilizadas.
+
+O último princípio utilziado foi o I (Interface segregation), pois cada classe possui uma interface única e correspondente
+a sua responsabilidade.
+
+Os princípis L e D não foram nosso projeto, uma vez que ele é pequeno e não demandou uma complexa estrututa de
+hierarquia de classes e não foi necessário abstrações complexas.
+
+Porém, dependendo de como o código poderia ter sido organizado, o princípio L poderia ser utilizado ao segmentar mais o script
+que rendezirava as páginas.
